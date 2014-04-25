@@ -720,7 +720,7 @@ a#advanced-search.button {
 
 #primary-nav {
   clear: both;
-  background-color: #f3f1ea;
+  background-color: #CDB08A;
   position: relative;
   margin: 0 auto;
   padding: 0;
@@ -777,14 +777,16 @@ a#advanced-search.button {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-decoration: none;
+  color: black;
   display: block;
   padding: 0.75em 18px;
   background: #fafafa;
   border: 1px solid #ccc;
 }
 #primary-nav a:hover, #primary-nav li.active a {
-  background: #fff;
-  color: #ff8000;
+  background: #e6ccac;
+  color: #A44A26;
+  text-decoration: underline;
 }
 #primary-nav li ul, #primary-nav li ul ul {
   display: none;
