@@ -580,8 +580,8 @@ header:after {
   font-weight: normal;
   font-family: 'Century Gothic', 'Gill Sans', sans-serif;
   color: #015581;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 34px;
+  line-height: 34px;
   text-transform: uppercase;
   letter-spacing: .2em;
   position: relative;
@@ -602,7 +602,7 @@ header:after {
 
 #search-container {
   float: right;
-  padding-right: 20px;
+  margin-right: 20px;
   width: 45%;
   position: relative;
 }
