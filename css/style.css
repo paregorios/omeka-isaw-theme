@@ -1472,6 +1472,10 @@ footer .navigation a {
   white-space: nowrap;
 }
 
+footer p {
+  margin: 0;
+  margin-bottom: 8px;
+}
 #footer-text {
   float: left;
   width: 48%;
@@ -1728,6 +1732,10 @@ footer .navigation a {
   }
   #mobile-nav li ul ul a:before {
     content: "---- ";
+  }
+
+  footer nav {
+    display: none;
   }
 
   footer .navigation {
