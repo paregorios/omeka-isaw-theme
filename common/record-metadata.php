@@ -10,6 +10,7 @@ $wantedElements = array();
 if(isset($elementsForDisplay['Item Type Metadata'])) {
     foreach ($elementsForDisplay['Item Type Metadata'] as $elementName => $elementInfo):
             $wantedElements[$elementName] = $elementsForDisplay['Item Type Metadata'][$elementName];
+    endforeach;
 }
 ?>
 
