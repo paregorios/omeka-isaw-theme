@@ -374,10 +374,10 @@ table {
 }
 
 body {
-  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 18px;
-  color: #333;
-  background: #fff;
+  font: 14px Arial, sans-serif;
+  line-height: 20px;
+  color: #231F20;
+  background: #6F5C54;
 }
 
 form, fieldset {
