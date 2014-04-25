@@ -878,8 +878,6 @@ a#advanced-search.button {
   background: #f3f1ea;
   position: relative;
   margin: 0 1.5em;
-  padding: 0;
-    padding: 1.5em 10px;
   z-index: 0;
 }
 #content:after {
@@ -1482,6 +1480,10 @@ footer .navigation a {
 #footer-text {
   float: left;
   width: 48%;
+}
+
+#footer-content {
+  margin-left: 0.3em;
 }
 
 .browse .exhibit {
