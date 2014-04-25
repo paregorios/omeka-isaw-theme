@@ -1095,7 +1095,7 @@ ul.title-list {
 .browse .item {
   clear: both;
   border-bottom: 1px solid #eee;
-  padding: 3em 0;
+  padding: 0 0 1.5em;  
   overflow: hidden;
 }
 
@@ -1122,8 +1122,6 @@ ul.title-list {
 }
 
 .item .tags {
-  clear: left;
-  margin-left: 216px;
 }
 
 .item h2 {
@@ -1287,7 +1285,7 @@ ul.title-list {
 }
 
 .browse .item-meta .item-description {
-  margin-bottom: 1.5em;
+  padding: 0.3em;
 }
 .browse .item-meta .item-description:only-of-type {
   margin-bottom: 0;
