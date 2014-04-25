@@ -1184,13 +1184,6 @@ ul.title-list {
 }
 
 .browse .item h2 {
-  float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
-  margin-left: 0;
-  margin-bottom: 0;
 }
 @media only screen and (max-width: 767px) {
   .browse .item h2 {
@@ -1214,13 +1207,7 @@ ul.title-list {
 }
 .browse .item .item-meta .item-img {
   float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
-  margin-right: 0;
-  float: right;
-  text-align: right;
+  margin-right: 1.5em;
 }
 @media only screen and (max-width: 767px) {
   .browse .item .item-meta .item-img {
@@ -1247,16 +1234,9 @@ ul.title-list {
   height: auto;
 }
 .browse .item div {
-  max-width: 100%;
 }
 
 .browse .item-meta {
-  float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 700px;
-  margin: 0;
 }
 @media only screen and (max-width: 767px) {
   .browse .item-meta {
