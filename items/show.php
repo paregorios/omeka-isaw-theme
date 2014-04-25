@@ -1,15 +1,7 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 <div id="primary ">
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
-    <?php
-    
-    $files = $item->Files;
-    $file = $files[0];
-    if($file->hasThumbnail()) {
-        echo display_file($firstFile);
-    }
-    ?>
-
+    <?php echo item_image_gallery(array(), 'thumbnail'); ?>
     <!-- Items metadata -->
     <div id="item-metadata">
         <?php echo all_element_texts('item'); ?>
