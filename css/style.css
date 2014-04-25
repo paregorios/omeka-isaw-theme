@@ -494,11 +494,11 @@ th {
 
 /* -- Links -- */
 a:link, a:visited {
-  color: #369;
+  color: #A44A26;
 }
 
 a:hover, a:active {
-  color: #ff8000;
+  text-decoration: underline;
 }
 
 img a {
@@ -594,6 +594,10 @@ header:after {
 #site-title a {
   text-decoration: none;
   color: white !important;
+}
+
+#site-title a:hover {
+  text-decoration: underline;
 }
 
 #search-container {
