@@ -581,6 +581,7 @@ header:after {
   text-transform: uppercase;
   letter-spacing: .2em;
   position: relative;
+  margin-left: 0.3em;
 }
 #site-title img {
   max-width: 100%;
@@ -821,7 +822,7 @@ a#advanced-search.button {
 }
 #secondary-nav .active a, .secondary-nav .active a {
   background: #fff;
-  color: #333;
+  color: #a54726;
   font-weight: bold;
 }
 #secondary-nav .tags .nav-browse-all a, .secondary-nav .tags .nav-browse-all a {
