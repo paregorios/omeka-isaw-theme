@@ -624,6 +624,8 @@ header:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  background-color: #EEECE7;
+  box-shadow: 1px 1px 1px inset;
 }
 #search-container input[type=submit] {
   padding: 2px;
