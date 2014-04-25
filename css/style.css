@@ -782,6 +782,7 @@ a#advanced-search.button {
   padding: 0.75em 18px;
   background: #CDB08A;
   border: 1px solid #ccc;
+  text-shadow: 2px 2px black;
 }
 #primary-nav a:hover, #primary-nav li.active a {
   background: #e6ccac;
