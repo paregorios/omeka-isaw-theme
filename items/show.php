@@ -4,6 +4,7 @@
     <?php
     
     $files = $item->Files;
+    $file = $files[0]
     if($file->hasThumbnail()) {
         echo (item_thumbnail());
     }
