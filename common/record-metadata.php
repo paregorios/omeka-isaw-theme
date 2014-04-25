@@ -9,11 +9,7 @@
 $wantedElements = array();
 if(isset($elementsForDisplay['Item Type Metadata'])) {
     foreach ($elementsForDisplay['Item Type Metadata'] as $elementName => $elementInfo):
-            $wantedElements[$elementName] = $elementInfo;
-}
-if(isset($elementsForDisplay['Dublin Core'])) {
-    foreach ($elementsForDisplay['Dublin Core'] as $elementName => $elementInfo):
-            $wantedElements[$elementName] = $elementInfo;
+            $wantedElements[$elementName] = $elementsForDisplay['Item Type Metadata'][$elementName];
 }
 ?>
 
