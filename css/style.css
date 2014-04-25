@@ -512,6 +512,7 @@ header {
   width: 960px;
   padding: 3em 0;
   position: relative;
+  background-color: #a54726;
 }
 header:after {
   content: "\0020";
