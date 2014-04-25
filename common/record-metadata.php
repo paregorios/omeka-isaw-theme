@@ -17,9 +17,16 @@ if(isset($elementsForDisplay['Dublin Core'])) {
             $wantedElements[$elementName] = $elementsForDisplay['Dublin Core'][$elementName];
     endforeach;
 }
+unset($wantedElements['Files']);
 ?>
 
 <div class="element-set">
+    <?php
+    $files = $item->Files;
+    if($file->hasThumbnail()) {
+        echo (item_thumbnail());
+    }
+    ?>
     <?php foreach ($wantedElements as $elementName => $elementInfo): ?>
     <div id="<?php echo text_to_id(html_escape("$elementName")); ?>" class="element">
         <h3><?php echo html_escape(__($elementName)); ?></h3>
