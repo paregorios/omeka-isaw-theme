@@ -378,15 +378,7 @@ body {
   line-height: 20px;
   color: #231F20;
   background: #6F5C54;
-  padding: 1.5em;
 }
-
-#admin-bar {
-  margin-top: -1.5em !important;
-  margin-right: -1.5em !important;
-  margin-left: -1.5em !important;
-}
-
 
 form, fieldset {
   border: 0;
@@ -515,9 +507,8 @@ img a {
 
 header {
   position: relative;
-  margin: 0 auto;
   padding: 0 0 1.5em 0;
-  margin-top: 1.5em;
+  margin: 1.5em 1.5em 0;
   position: relative;
 }
 header:after {
@@ -729,7 +720,7 @@ a#advanced-search.button {
   clear: both;
   background-color: #CDB08A;
   position: relative;
-  margin: 0 auto;
+  margin: 0 1.5em;
   padding: 0;
   z-index: 50;
 }
@@ -886,7 +877,7 @@ a#advanced-search.button {
   border: 1px solid #ccc;
   background: #f3f1ea;
   position: relative;
-  margin: 0 auto;
+  margin: 0 1.5em;
   padding: 0;
     padding: 1.5em 10px;
   z-index: 0;
@@ -1425,10 +1416,9 @@ footer {
   clear: both;
   color: white;
   position: relative;
-  margin: 0 auto;
+  margin: 1.5em 1.5em 0;;
   padding: 0;
-    overflow: hidden;
-  margin-top: 1.5em;
+  overflow: hidden;
 }
 footer:after {
   content: "\0020";
