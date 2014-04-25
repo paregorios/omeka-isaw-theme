@@ -877,7 +877,7 @@ a#advanced-search.button {
   border: 1px solid #ccc;
   background: #f3f1ea;
   position: relative;
-  margin: 0 1.5em;
+  padding: 1.5em;
   z-index: 0;
 }
 #content:after {
