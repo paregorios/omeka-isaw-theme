@@ -378,8 +378,18 @@ body {
   line-height: 20px;
   color: #231F20;
   background: #6F5C54;
-  padding: 1.5em;
+  padding-bottom: 1.5em;
 }
+
+body > * {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+#admin-bar {
+  margin: 0 !important;
+}
+
 
 form, fieldset {
   border: 0;
@@ -510,6 +520,7 @@ header {
   position: relative;
   margin: 0 auto;
   padding: 0 0 1.5em 0;
+  margin-top: 1.5em;
   position: relative;
 }
 header:after {
