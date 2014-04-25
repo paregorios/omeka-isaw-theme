@@ -510,9 +510,8 @@ header {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  padding: 3em 0;
+  padding-top: 1em;  
   position: relative;
-  background-color: #a54726;
 }
 header:after {
   content: "\0020";
@@ -723,7 +722,6 @@ a#advanced-search.button {
   position: relative;
   margin: 0 auto;
   padding: 0;
-    border-bottom: 1px solid #ccc;
   z-index: 50;
 }
 #primary-nav:after {
@@ -776,11 +774,12 @@ a#advanced-search.button {
   box-sizing: border-box;
   text-decoration: none;
   color: white;
+  text-transform: uppercase;
   display: block;
   padding: 0.75em 18px;
   background: #CDB08A;
   border: 1px solid #ccc;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 1px gray;
 }
 #primary-nav a:hover, #primary-nav li.active a {
   background: #e6ccac;
