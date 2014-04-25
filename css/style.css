@@ -575,6 +575,7 @@ header:after {
 
 #site-title {
   float: left;
+  padding-left: 20px;
   width: 50%;
   font-weight: normal;
   font-family: 'Gill Sans', sans-serif;
@@ -596,6 +597,7 @@ header:after {
 
 #search-container {
   float: right;
+  padding-rigth: 20px;
   width: 45%;
   position: relative;
 }
