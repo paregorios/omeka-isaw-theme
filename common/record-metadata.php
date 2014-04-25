@@ -7,11 +7,14 @@
 //follow this pattern to get more or change the order
 
 $wantedElements = array();
-$wantedElements['Title'] = $elementsForDisplay['Dublin Core']['Title'];
 if(isset($elementsForDisplay['Item Type Metadata'])) {
-    $wantedElements['Primary Source Text'] = $elementsForDisplay['Item Type Metadata']['Text'];
+    foreach ($elementsForDisplay['Item Type Metadata'] as $elementName => $elementInfo):
+            $wantedElements[$elementName] = $elementInfo;
 }
-$wantedElements['Commentary'] = $elementsForDisplay['Dublin Core']['Description'];
+if(isset($elementsForDisplay['Dublin Core'])) {
+    foreach ($elementsForDisplay['Dublin Core'] as $elementName => $elementInfo):
+            $wantedElements[$elementName] = $elementInfo;
+}
 ?>
 
 <div class="element-set">
