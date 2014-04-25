@@ -12,6 +12,11 @@ if(isset($elementsForDisplay['Item Type Metadata'])) {
             $wantedElements[$elementName] = $elementsForDisplay['Item Type Metadata'][$elementName];
     endforeach;
 }
+if(isset($elementsForDisplay['Dublin Core'])) {
+    foreach ($elementsForDisplay['Dublin Core'] as $elementName => $elementInfo):
+            $wantedElements[$elementName] = $elementsForDisplay['Dublin Core'][$elementName];
+    endforeach;
+}
 ?>
 
 <div class="element-set">
