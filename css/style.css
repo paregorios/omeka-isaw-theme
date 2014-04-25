@@ -599,7 +599,8 @@ header:after {
 
 #search-container {
   float: right;
-  width: 45%;
+  min-width: 400px;
+  max-width: 45%;
   position: relative;
 }
 #search-container h2 {
