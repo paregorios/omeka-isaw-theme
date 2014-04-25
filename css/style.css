@@ -392,13 +392,13 @@ input[type=text], input[type=password], textarea {
 
 /* -- Headings -- */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 18px;
+  margin-bottom: 0;
 }
 
 h1, h2, h3 {
   font-weight: normal;
   font-family: 'Century Gothic', 'Gill Sans', sans-serif;
-  color: #A44A26;
+  color: #231F20;
 }
 
 h1 {
@@ -416,7 +416,6 @@ h2 {
 h3 {
   font-size: 18px;
   line-height: 18px;
-  color: #A44A26;
 }
 
 h4, h5 {
@@ -433,7 +432,6 @@ h5 {
 }
 
 h6 {
-  color: #666;
 }
 
 h1 a, h2 a, h3 a {
@@ -442,7 +440,7 @@ h1 a, h2 a, h3 a {
 
 /* -- Misc Block elements -- */
 p, ul, ol, dl {
-  margin-bottom: 18px;
+  margin-bottom: 0.5em;
 }
 
 ul ul, ul ol, ol ol, ol ul {
@@ -877,7 +875,8 @@ a#advanced-search.button {
   border: 1px solid #ccc;
   background: #f3f1ea;
   position: relative;
-  padding: 1.5em;
+  padding: 0 1.5em;
+  margin: 0 1.5em;
   z-index: 0;
 }
 #content:after {
