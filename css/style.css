@@ -1446,11 +1446,11 @@ footer:after {
   }
 }
 footer a {
-  color: white;
-  text-decoration: none;
+  color: white !important;
+  text-decoration: underline !important;
 }
 footer a:hover, footer a:active {
-  text-decoration: underline;
+  text-decoration: none !important;
 }
 footer .navigation {
   font-weight: bold;
