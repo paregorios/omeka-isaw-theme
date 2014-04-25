@@ -397,8 +397,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3 {
   font-weight: normal;
-  font-family: 'Gill Sans', sans-serif;
-  color: #015581;
+  font-family: 'Century Gothic', 'Gill Sans', sans-serif;
+  color: #A44A26;
 }
 
 h1 {
@@ -578,7 +578,7 @@ header:after {
   padding-left: 20px;
   width: 50%;
   font-weight: normal;
-  font-family: 'Gill Sans', sans-serif;
+  font-family: 'Century Gothic', 'Gill Sans', sans-serif;
   color: #015581;
   font-size: 36px;
   line-height: 36px;
