@@ -509,7 +509,6 @@ header {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 960px;
   padding: 3em 0;
   position: relative;
   background-color: #a54726;
@@ -541,8 +540,7 @@ header:after {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 960px;
-}
+  }
 #header-image:after {
   content: "\0020";
   display: block;
@@ -724,8 +722,7 @@ a#advanced-search.button {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 960px;
-  border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   z-index: 50;
 }
 #primary-nav:after {
@@ -882,8 +879,7 @@ a#advanced-search.button {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 960px;
-  padding: 1.5em 10px;
+    padding: 1.5em 10px;
   z-index: 0;
 }
 #content:after {
@@ -1029,8 +1025,7 @@ a#advanced-search.button {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 960px;
-  padding: 1.5em 10px;
+    padding: 1.5em 10px;
 }
 .items #content:after {
   content: "\0020";
@@ -1423,8 +1418,7 @@ footer {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 960px;
-  overflow: hidden;
+    overflow: hidden;
   margin-top: 1.5em;
 }
 footer:after {
@@ -1684,8 +1678,7 @@ footer .navigation a {
     position: relative;
     margin: 0 auto;
     padding: 0;
-    width: 960px;
-    zoom: 1;
+        zoom: 1;
   }
   #mobile-nav:after {
     content: "\0020";
