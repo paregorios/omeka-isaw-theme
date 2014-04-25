@@ -1,6 +1,13 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
-<div id="primary">
+<div id="primary ">
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
+    <?php
+    
+    $files = $item->Files;
+    if($file->hasThumbnail()) {
+        echo (item_thumbnail());
+    }
+    ?>
 
     <!-- Items metadata -->
     <div id="item-metadata">
