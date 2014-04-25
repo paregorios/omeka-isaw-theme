@@ -378,7 +378,7 @@ body {
   line-height: 20px;
   color: #231F20;
   background: #6F5C54;
-  padding: 20px;
+  padding: 1.5em;
 }
 
 form, fieldset {
@@ -509,8 +509,7 @@ img a {
 header {
   position: relative;
   margin: 0 auto;
-  padding: 0;
-  padding-top: 1em;  
+  padding: 0 0 1.5em 0;
   position: relative;
 }
 header:after {
@@ -573,7 +572,6 @@ header:after {
 
 #site-title {
   float: left;
-  padding-left: 20px;
   width: 50%;
   font-weight: normal;
   font-family: 'Century Gothic', 'Gill Sans', sans-serif;
@@ -600,7 +598,6 @@ header:after {
 
 #search-container {
   float: right;
-  margin-right: 20px;
   width: 45%;
   position: relative;
 }
