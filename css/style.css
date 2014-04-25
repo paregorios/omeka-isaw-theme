@@ -593,11 +593,12 @@ header:after {
 
 #site-title a {
   text-decoration: none;
+  color: white !important;
 }
 
 #search-container {
   float: right;
-  padding-rigth: 20px;
+  padding-right: 20px;
   width: 45%;
   position: relative;
 }
