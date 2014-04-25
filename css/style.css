@@ -1018,19 +1018,7 @@ a#advanced-search.button {
   padding: 2px;
 }
 
-.items #content {
-  position: relative;
-  margin: 0 auto;
-  padding: 0;
-    padding: 1.5em 10px;
-}
-.items #content:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .items #content {
     width: 768px;
