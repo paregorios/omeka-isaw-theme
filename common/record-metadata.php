@@ -23,9 +23,9 @@ unset($wantedElements['Files']);
 <div class="element-set">
     <?php foreach ($wantedElements as $elementName => $elementInfo): ?>
     <div id="<?php echo text_to_id(html_escape("$elementName")); ?>" class="element">
-        <h3><?php echo html_escape(__($elementName)); ?></h3>
+        <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
         <?php foreach ($elementInfo['texts'] as $text): ?>
-            <div class="element-text"><?php echo $text; ?></div>
+        <span class="element-text"><?php echo $text; ?></span>
         <?php endforeach; ?>
     </div><!-- end element -->
     <?php endforeach; ?>
