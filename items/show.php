@@ -7,15 +7,10 @@
         <?php echo all_element_texts('item'); ?>
     </div>
 
-    <h3><?php echo __('Files'); ?></h3>
-    <div id="item-images">
-         <?php echo files_for_item(); ?>
-    </div>
-
    <?php if(metadata('item','Collection Name')): ?>
       <div id="collection" class="element">
-        <h3><?php echo __('Collection'); ?></h3>
-        <div class="element-text"><?php echo link_to_collection_for_item(); ?></div>
+        <span class="element-name"><?php echo __('Collection'); ?></span>:
+        <span class="element-text"><?php echo link_to_collection_for_item(); ?></span>
       </div>
    <?php endif; ?>
 
@@ -29,7 +24,7 @@
 
     <!-- The following prints a citation for this item. -->
     <div id="item-citation" class="element">
-        <h3><?php echo __('Citation'); ?></h3>
+        <h3><?php echo __('Please cite this item as follows:'); ?></h3>
         <div class="element-text"><?php echo metadata('item','citation',array('no_escape'=>true)); ?></div>
     </div>
        <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
