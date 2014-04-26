@@ -32,9 +32,9 @@
     <?php queue_js_file('vendor/flexslider/jquery.flexslider-min', 'javascripts'); ?>
     <?php echo head_js(); ?>
     <script type="text/javascript" charset="utf-8">
-        $(window).load(function() {
+        window.onload = function() {
         $('.flexslider').flexslider();
-      });
+      };
     </script>
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
