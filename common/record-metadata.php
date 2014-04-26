@@ -17,7 +17,7 @@ if(isset($elementsForDisplay['Dublin Core'])) {
             $wantedElements[$elementName] = $elementsForDisplay['Dublin Core'][$elementName];
     endforeach;
 }
-unset($wantedElements['Files']);
+unset($wantedElements['Title']);
 ?>
 
 <div class="element-set">
