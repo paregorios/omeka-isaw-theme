@@ -33,7 +33,8 @@
         set_loop_records('items', get_recent_items($homepageRecentItems));
         if (has_loop_records('items')):
         ?>
-        <ul class="items-list">
+    <div class="flexslider">
+        <ul class="items-list slides">
         <?php foreach (loop('items') as $item): ?>
         <li class="item">
             <h3><?php echo link_to_item(); ?></h3>
@@ -43,6 +44,7 @@
         </li>
         <?php endforeach; ?>
         </ul>
+    </div>
         <?php else: ?>
         <p><?php echo __('No recent items available.'); ?></p>
         <?php endif; ?>
