@@ -18,7 +18,7 @@
                 <p class="item-description"><?php echo $itemDescription; ?></p>
                <?php if(metadata('item','Collection Name')): ?>
                   <p id="collection" class="element">
-                    <?php echo __('See more images from this collection: '); ?>
+                    <?php echo __('See more images from the '); ?>
                     <span class="element-text"><?php echo link_to_collection_for_item(); ?></span> collection.
                   </p>
                <?php endif; ?>
