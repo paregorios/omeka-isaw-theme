@@ -38,7 +38,7 @@
 
 <div id="secondary">
     <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
-    <p><?php echo $homepageText; ?></p>
+    <?php echo $homepageText; ?>
     <?php endif; ?>
     <?php if (get_theme_option('Display Featured Item') == 1): ?>
     <!-- Featured Item -->
