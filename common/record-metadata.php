@@ -21,8 +21,11 @@ unset($wantedElements['Title']);
 ?>
 
 <div class="element-set">
-    <?php if($subject = $wantedElements['Dublin Core']['Subject']): ?>
-        <p class="hero"><?php echo $subject; ?></p>
+    <?php if($subject = $wantedElements['Subject']): ?>
+        <p class="hero"><?php 
+            foreach($subject[1]['texts'] as $text):
+                echo $text;
+            endforeach; ?></p>
     <?php endif;?>
     <?php foreach ($wantedElements as $elementName => $elementInfo): ?>
     <p id="<?php echo text_to_id(html_escape("$elementName")); ?>" class="element">
