@@ -33,7 +33,7 @@
     <?php echo head_js(); ?>
     <script type="text/javascript" charset="utf-8">
         window.onload = function() {
-        $('.flexslider').flexslider();
+        jQuery('.flexslider').flexslider();
       };
     </script>
 </head>
