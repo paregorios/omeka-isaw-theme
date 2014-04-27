@@ -1090,6 +1090,8 @@ a#advanced-search.button {
   max-width: 49vw;
   float: left;
   margin-right: 21px;
+  border: 1px solid #CCCCCC;
+  padding: 2px;
 }
 .sort-label {
   display: inline-block;
