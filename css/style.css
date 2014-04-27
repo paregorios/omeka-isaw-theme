@@ -1069,9 +1069,12 @@ ul.title-list {
   margin-bottom: 1em;
   margin-top: 1em;
   float: left;
-  margin-right: -10px;
+  margin-right: 1em;
 }
 
+.flexslider {
+  padding-right: 1em;
+}
 .flexslider > .slides > .item > * {
   margin-left: 1em;
 }
