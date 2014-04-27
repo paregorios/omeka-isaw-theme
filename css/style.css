@@ -1029,6 +1029,10 @@ a#advanced-search.button {
   overflow: hidden;
   margin-bottom: 21px;
 }
+#recent-items .item h3 {
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
 #recent-items .item img {
   border: 1px solid #ccc;
   padding: 2px;
@@ -1092,12 +1096,18 @@ ul.title-list {
 }
 
 .flexslider {
-  padding-right: 1em !important;
+  padding-right: 1em;
+}
+#home #recent-items .flexslider {
+  padding: 21px;
 }
 .flexslider > .slides > .item > * {
   margin-left: 1em;
 }
-
+#home #recent-items .flexslider > .slides > .item > *{
+  margin: 0;
+  padding: 0;
+}
 .fullsize {
   margin-right: 10px;
 }
