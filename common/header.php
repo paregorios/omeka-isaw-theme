@@ -20,8 +20,8 @@
     <?php fire_plugin_hook('public_head',array('view'=>$this)); ?>
     <!-- Stylesheets -->
     <?php
-    queue_css_file('style');
     queue_css_file('flexslider');
+    queue_css_file('style');
 
     echo head_css();
     ?>
