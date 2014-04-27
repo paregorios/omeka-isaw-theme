@@ -451,9 +451,12 @@ p, ul, ol, dl {
   margin-bottom: 14px;
 }
 #home #content #secondary p {
-  margin-bottom: 28px;
+  max-width: 800px;
 }
-
+p.hero {
+  font-size: 18px;
+  line-height: 27px;
+}
 ul ul, ul ol, ol ol, ol ul {
   margin-bottom: 0;
 }
