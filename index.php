@@ -16,6 +16,12 @@
             <?php echo item_image_gallery(array(), 'thumbnail'); ?>
             <?php if($itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>150))): ?>
                 <p class="item-description"><?php echo $itemDescription; ?></p>
+               <?php if(metadata('item','Collection Name')): ?>
+                  <p id="collection" class="element">
+                    <?php echo __('See more images from this collection: '); ?>
+                    <span class="element-text"><?php echo link_to_collection_for_item(); ?></span> collection.
+                  </p>
+               <?php endif; ?>
             <?php endif; ?>
         </li>
         <?php endforeach; ?>
