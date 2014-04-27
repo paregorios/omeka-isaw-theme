@@ -957,7 +957,7 @@ a#advanced-search.button {
   padding-left: 10px;
 }
 #home #primary, #home #secondary {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 @media only screen and (max-width: 767px) {
   #home #secondary {
@@ -1022,6 +1022,9 @@ a#advanced-search.button {
   margin-top: 0;
 }
 
+#recent-items > .flexslider {
+  margin-top: 21px;
+}
 #recent-items .item {
   overflow: hidden;
   margin-bottom: 21px;
