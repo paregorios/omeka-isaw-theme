@@ -1081,7 +1081,7 @@ a#advanced-search.button {
   display: inline;
 }
 
-.items.show .item-file.[item^="image-"]{
+.items.show [class="item-file"][class*="image-"]{
   border: 1px solid red;
   max-height: 70vh;
 }
