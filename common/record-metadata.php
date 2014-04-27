@@ -22,12 +22,12 @@ unset($wantedElements['Title']);
 
 <div class="element-set">
     <?php foreach ($wantedElements as $elementName => $elementInfo): ?>
-    <div id="<?php echo text_to_id(html_escape("$elementName")); ?>" class="element">
+    <p id="<?php echo text_to_id(html_escape("$elementName")); ?>" class="element">
         <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
         <?php foreach ($elementInfo['texts'] as $text): ?>
         <span class="element-text"><?php echo $text; ?></span>
         <?php endforeach; ?>
-    </div><!-- end element -->
+    </p><!-- end element -->
     <?php endforeach; ?>
 </div><!-- end element-set -->
 
