@@ -1108,6 +1108,12 @@ ul.title-list {
   margin: 0;
   padding: 0;
 }
+#home #recent-items .flexslider > .slides > .item > h3 {
+  margin-bottom: 21px;
+}
+#home #recent-items .flexslider > .slides > .item > div {
+  margin-right: 17px;
+}
 .fullsize {
   margin-right: 10px;
 }
