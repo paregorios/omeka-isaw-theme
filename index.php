@@ -34,10 +34,11 @@
         if (has_loop_records('items')):
         ?>
     <div class="flexslider">
-        <ul class="items-list slides">
+        <ul class="slides">
         <?php foreach (loop('items') as $item): ?>
         <li class="item">
             <h3><?php echo link_to_item(); ?></h3>
+            <?php echo item_image_gallery(array(), 'thumbnail'); ?>
             <?php if($itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>150))): ?>
                 <p class="item-description"><?php echo $itemDescription; ?></p>
             <?php endif; ?>
