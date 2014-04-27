@@ -463,7 +463,7 @@ p.hero {
   font-size: 18px;
   line-height: 27px;
 }
-p.simple-pages-breadcrumbs {
+#simple-pages-breadcrumbs {
   margin-top: 14px;
 }
 ul ul, ul ol, ol ol, ol ul {
