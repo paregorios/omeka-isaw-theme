@@ -1087,6 +1087,7 @@ a#advanced-search.button {
 }
 .items.show [class*="item-file"][class*="image-"] img{
   max-height: 70vh;
+  max-width: 49vh;
   float: left;
   margin-right: 21px;
 }
