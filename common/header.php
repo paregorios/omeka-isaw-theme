@@ -21,6 +21,7 @@
     <!-- Stylesheets -->
     <?php
     queue_css_file('style');
+    queue_css_file('javascripts/vendor/flexslider');
 
     echo head_css();
     ?>
