@@ -1084,12 +1084,13 @@ a#advanced-search.button {
 .items.show [class*="item-file"][class*="image-"]{
   border: 1px solid red;
   max-height: 70vh;
+  max-width: 49%;
 }
 .items.show [class*="item-file"][class*="image-"] img{
   max-height: 100%;
-  width: auto;
+  width: 100%;
   margin: auto;
-  display: block;
+  display: inline-block;
 }
 .sort-label {
   display: inline-block;
