@@ -21,12 +21,23 @@ unset($wantedElements['Title']);
 ?>
 
 <div class="element-set">
+    <!-- subject -->
     <?php if($subject = $wantedElements['Subject']): ?>
-        <p class="hero"><?php 
+        <p class="hero element"><?php 
             foreach($subject['texts'] as $text):
                 echo $text;
             endforeach; ?></p>
+        <?php unset($wantedElements['Subject']); ?>
     <?php endif;?>
+
+    <!-- description -->
+    <?php if($subject = $wantedElements['Description']):
+            foreach($subject['texts'] as $text): ?>
+            <p class="element"><?php echo $text; ?></p>
+            <?php endforeach; ?>
+        <?php unset($wantedElements['Description']); ?>
+    <?php endif;?>
+
     <?php foreach ($wantedElements as $elementName => $elementInfo): ?>
     <p id="<?php echo text_to_id(html_escape("$elementName")); ?>" class="element">
         <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
