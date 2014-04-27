@@ -408,7 +408,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: .1em;
 }
-.simple-page #content h1 {
+.simple-page #content h1, .show #content h1 {
   margin-bottom: 21px;
 }
 h2 {
