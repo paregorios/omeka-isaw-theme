@@ -21,7 +21,7 @@ unset($wantedElements['Title']);
 ?>
 
 <div class="element-set">
-    <?php if($subject = $wantedElements['Subject']): ?>
+    <?php if($subject = $wantedElements['Dublin Core']['Subject']): ?>
         <p class="hero"><?php echo $subject; ?></p>
     <?php endif;?>
     <?php foreach ($wantedElements as $elementName => $elementInfo): ?>
