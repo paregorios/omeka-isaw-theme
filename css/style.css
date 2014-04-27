@@ -1085,7 +1085,12 @@ a#advanced-search.button {
   border: 1px solid red;
   max-height: 70vh;
 }
-
+.items.show [class*="item-file"][class*="image-"] img{
+  max-height: 100%;
+  width: auto;
+  margin: auto;
+  display: block;
+}
 .sort-label {
   display: inline-block;
 }
