@@ -23,7 +23,7 @@ unset($wantedElements['Title']);
 <div class="element-set">
     <?php if($subject = $wantedElements['Subject']): ?>
         <p class="hero"><?php 
-            foreach($subject[0]['texts'] as $text):
+            foreach($subject['texts'] as $text):
                 echo $text;
             endforeach; ?></p>
     <?php endif;?>
