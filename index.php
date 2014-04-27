@@ -2,7 +2,7 @@
 <div id="primary">
     <!-- Recent Items -->
     <div id="recent-items">
-        <h2><?php echo __('New Images'); ?></h2>
+        <h2><?php echo __('Latest Images'); ?></h2>
         <?php
         $homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '3';
         set_loop_records('items', get_recent_items($homepageRecentItems));
