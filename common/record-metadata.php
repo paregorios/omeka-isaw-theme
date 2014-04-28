@@ -35,25 +35,28 @@ unset($wantedElements['Title']);
 
 <div class="element-set">
     <!-- creator for collections --> 
-    <?php if(isset(get_view()->collection) and isset($wantedElements['Creator'])):
-        $subject = $wantedElements['Creator']; 
-        $text = $subject['texts'][0];
-        echo $text;
-        if(startsWith($text, "http://isaw.nyu.edu/people/") or startsWith($text, "https://isaw.nyu.edu/people/")): ?>
-        <p>ISAW person</p>
-        <?php elseif(startsWith($text, "http://viaf.org/viaf/")): ?>
-            <p>VIAF person</p>
-        <?php else: ?>
-            <p>lame person</p>
-        <?php endif; ?>
-        <p class="element"><?php 
-            foreach($subject['texts'] as $text): ?>
-                <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
-                <?php foreach ($elementInfo['texts'] as $text): ?>
-                <span class="element-text"><?php echo $text; ?></span>
-                <?php endforeach; 
-            endforeach; ?></p>
-        <?php unset($wantedElements['Creator']); ?>
+    <?php if(isset(get_view()->collection) and isset($wantedElements['Creator'])): ?>
+        <p class="element">
+            <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
+            <?php $subject = $wantedElements['Creator']; 
+            $textz = $subject['texts'][0];
+            if(startsWith($textz, "http://isaw.nyu.edu/people/") or startsWith($textz, "https://isaw.nyu.edu/people/")): ?>
+                <!-- ISAW person -->
+                <p>ISAW person</p>
+            <?php elseif(startsWith($textz, "http://viaf.org/viaf/")): ?>
+                <!-- VIAF person -->
+                <p>VIAF person</p>
+            <?php else: ?>
+                <!-- plain-text creator -->
+                <?php foreach($subject['texts'] as $text): ?>
+                    <span class="element-text">
+                        <?php foreach ($elementInfo['texts'] as $text): 
+                             echo $text; ?>
+                        endforeach; ?>
+                    </span>
+                <? php endforeach; ?>
+            <?php endif; ?>
+        </p>
     <?php endif;?>
 
 
