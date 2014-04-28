@@ -51,11 +51,9 @@ unset($wantedElements['Title']);
                     } elseif ($graph->type() == 'foaf:Person') {
                         $person = $graph->resource();
                     }
-                    echo "My name is: ".$person->get('foaf:name')."\n";
-
                     ?>
                     <!-- ISAW person -->
-                    <a href="<?php echo $textz; ?>">ISAW person</a>
+                    <a href="<?php echo $textz; ?>"><?php echo $person->get('foaf:name') ?></a>
                 <?php elseif(startsWith($textz, "http://viaf.org/viaf/")): ?>
                     <!-- VIAF person -->
                     <p>VIAF person</p>
