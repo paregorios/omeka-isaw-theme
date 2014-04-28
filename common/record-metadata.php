@@ -21,6 +21,19 @@ unset($wantedElements['Title']);
 ?>
 
 <div class="element-set">
+    <!-- creator for collections --> 
+    <?php if(isset(get_view()->collection) and isset($wantedElements['Creator`'])):
+        $subject = $wantedElements['Creator']; ?>
+        <p class="element"><?php 
+            foreach($subject['texts'] as $text): ?>
+                <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
+                <?php foreach ($elementInfo['texts'] as $text): ?>
+                <span class="element-text"><?php echo $text; ?></span>
+            <?php endforeach; ?></p>
+        <?php unset($wantedElements['Creator']); ?>
+    <?php endif;?>
+
+
     <!-- subject -->
     <?php if(isset($wantedElements['Subject'])):
         $subject = $wantedElements['Subject']; ?>
