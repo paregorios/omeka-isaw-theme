@@ -1,5 +1,7 @@
 <?php 
 
+require 'vendor/autoload.php';
+
 function startsWith($haystack, $needle)
 {
     return $needle === "" || strpos($haystack, $needle) === 0;
@@ -41,7 +43,14 @@ unset($wantedElements['Title']);
             <?php $subject = $wantedElements['Creator']; 
             $textz = $subject['texts'][0]; ?>
             <span class="element-text">
-                <?php if(startsWith($textz, "http://isaw.nyu.edu/people/") or startsWith($textz, "https://isaw.nyu.edu/people/")): ?>
+                <?php if(startsWith($textz, "http://isaw.nyu.edu/people/") or startsWith($textz, "https://isaw.nyu.edu/people/")): 
+                    $url=$textz . "/foaf.rdf";
+                    $foaf = new EasyRdf_Graph($url);
+                    $foaf->load();
+                    $me = $foaf->primaryTopic();
+                    echo "My name is: ".$me->get('foaf:name')."\n";
+
+                    ?>
                     <!-- ISAW person -->
                     <a href="<?php echo $textz; ?>">ISAW person</a>
                 <?php elseif(startsWith($textz, "http://viaf.org/viaf/")): ?>
