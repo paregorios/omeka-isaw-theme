@@ -7,7 +7,7 @@ if ($collectionTitle == '') {
 
 <?php echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show')); ?>
 
-<h1><?php echo $collectionTitle; ?> woop woop</h1>
+<h1><?php echo $collectionTitle; ?></h1>
 
 <?php echo all_element_texts('collection'); ?>
 
@@ -21,7 +21,7 @@ if ($collectionTitle == '') {
 
             <?php if (metadata('item', 'has thumbnail')): ?>
             <div class="item-img">
-                <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
+                <?php echo link_to_item(item_image('thumbnail', array('alt' => $itemTitle))); ?>
             </div>
             <?php endif; ?>
 
