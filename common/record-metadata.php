@@ -22,7 +22,8 @@ unset($wantedElements['Title']);
 
 <div class="element-set">
     <!-- subject -->
-    <?php if(isset($subject = $wantedElements['Subject']): ?>
+    <?php if(isset($wantedElements['Subject'])):
+        $subject = $wantedElements['Subject']; ?>
         <p class="hero element"><?php 
             foreach($subject['texts'] as $text):
                 echo $text;
@@ -31,7 +32,8 @@ unset($wantedElements['Title']);
     <?php endif;?>
 
     <!-- description -->
-    <?php if(isset($subject = $wantedElements['Description']):
+    <?php if(isset($wantedElements['Description'])):
+        $subject = $wantedElements['Description'];
             foreach($subject['texts'] as $text): ?>
             <p class="element"><?php echo $text; ?></p>
             <?php endforeach; ?>
