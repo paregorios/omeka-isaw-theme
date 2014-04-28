@@ -57,7 +57,7 @@ unset($wantedElements['Title']);
                 <?php elseif(startsWith($textz, "http://viaf.org/viaf/")): 
                     $url=$textz . "/rdf.xml";
                     $graph = EasyRdf_Graph::newAndLoad($url);
-                    if ($graph->type() == 'foaf:PersonalProfileDocument') {
+                    if ($graph->type() == 'foaf:PersonalProfileDocument' or $graph->type() == 'foaf:Document') {
                         $person = $graph->primaryTopic();
                     } elseif ($graph->type() == 'foaf:Person') {
                         $person = $graph->resource();
