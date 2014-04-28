@@ -53,10 +53,17 @@ unset($wantedElements['Title']);
                     }
                     ?>
                     <!-- ISAW person -->
-                    <a href="<?php echo $textz; ?>"><?php echo $person->get('foaf:name') ?></a>
+                    <a text="link to ISAW personal profile" href="<?php echo $textz; ?>"><?php echo $person->get('foaf:name') ?></a>
                 <?php elseif(startsWith($textz, "http://viaf.org/viaf/")): ?>
+                    $url=$textz;
+                    $graph = EasyRdf_Graph::newAndLoad($url);
+                    if ($graph->type() == 'foaf:PersonalProfileDocument') {
+                        $person = $graph->primaryTopic();
+                    } elseif ($graph->type() == 'foaf:Person') {
+                        $person = $graph->resource();
+                    }
                     <!-- VIAF person -->
-                    <p>VIAF person</p>
+                    <a text="linke to VIAF record" href="<?php echo $textz; ?>"><?php echo $person->get('foaf:name') ?></a>
                 <?php else: ?>
                     <!-- plain-text creator -->
                     <?php foreach($subject['texts'] as $text): ?>
