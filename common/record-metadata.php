@@ -22,7 +22,7 @@ unset($wantedElements['Title']);
 
 <div class="element-set">
     <!-- creator for collections --> 
-    <?php if(isset(get_view()->collection) and isset($wantedElements['Creator`'])):
+    <?php if(isset(get_view()->collection) and isset($wantedElements['Creator'])):
         $subject = $wantedElements['Creator']; ?>
         <p class="element"><?php 
             foreach($subject['texts'] as $text): ?>
