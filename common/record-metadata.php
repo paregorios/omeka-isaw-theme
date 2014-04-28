@@ -45,11 +45,13 @@ unset($wantedElements['Title']);
             <span class="element-text">
                 <?php if(startsWith($textz, "http://isaw.nyu.edu/people/") or startsWith($textz, "https://isaw.nyu.edu/people/")): 
                     $url=$textz . "/foaf.rdf";
-                    $foaf = new EasyRdf_Graph($url);
-                    $foaf->load();
-                    $me = $foaf->primaryTopic();
-                    echo "Me is: ".$me."\n";
-                    echo "My name is: ".$me->get('foaf:name')."\n";
+                    $graph = EasyRdf_Graph::newAndLoad($url);
+                    if ($graph->type() == 'foaf:PersonalProfileDocument') {
+                        $person = $graph->primaryTopic();
+                    } elseif ($graph->type() == 'foaf:Person') {
+                        $person = $graph->resource();
+                    }
+                    echo "My name is: ".$person->get('foaf:name')."\n";
 
                     ?>
                     <!-- ISAW person -->
