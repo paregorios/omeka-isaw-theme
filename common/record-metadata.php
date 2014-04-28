@@ -39,23 +39,23 @@ unset($wantedElements['Title']);
         <p class="element">
             <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
             <?php $subject = $wantedElements['Creator']; 
-            $textz = $subject['texts'][0];
-            if(startsWith($textz, "http://isaw.nyu.edu/people/") or startsWith($textz, "https://isaw.nyu.edu/people/")): ?>
-                <!-- ISAW person -->
-                <p>ISAW person</p>
-            <?php elseif(startsWith($textz, "http://viaf.org/viaf/")): ?>
-                <!-- VIAF person -->
-                <p>VIAF person</p>
-            <?php else: ?>
-                <!-- plain-text creator -->
-                <?php foreach($subject['texts'] as $text): ?>
-                    <span class="element-text">
+            $textz = $subject['texts'][0]; ?>
+            <span class="element-text">
+                <?php if(startsWith($textz, "http://isaw.nyu.edu/people/") or startsWith($textz, "https://isaw.nyu.edu/people/")): ?>
+                    <!-- ISAW person -->
+                    <a href="<?php echo $textz; ?>">ISAW person</a>
+                <?php elseif(startsWith($textz, "http://viaf.org/viaf/")): ?>
+                    <!-- VIAF person -->
+                    <p>VIAF person</p>
+                <?php else: ?>
+                    <!-- plain-text creator -->
+                    <?php foreach($subject['texts'] as $text): ?>
                         <?php foreach ($elementInfo['texts'] as $text): 
                              echo $text;
                         endforeach; ?>
-                    </span>
-                <?php endforeach; ?>
-            <?php endif; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </span>
         </p>
     <?php endif;?>
 
