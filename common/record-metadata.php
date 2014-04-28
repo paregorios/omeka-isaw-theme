@@ -49,7 +49,7 @@ unset($wantedElements['Title']);
 </div><!-- end element-set -->
 
 <?php else: ?>
-
+    <p>Garflactula</p>
 <?php foreach ($elementsForDisplay as $setName => $setElements): ?>
 <div class="element-set">
     <h2><?php echo html_escape(__($setName)); ?></h2>
