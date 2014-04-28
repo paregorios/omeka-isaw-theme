@@ -36,13 +36,15 @@ unset($wantedElements['Title']);
 ?>
 
 <div class="element-set">
+
     <!-- creator for collections --> 
+    <!-- TODO: handle multiple creators -->
     <?php if(isset(get_view()->collection) and isset($wantedElements['Creator'])): ?>
         <p class="element">
-            <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
+            <span class="element-name" title="creator">By: </span>:
             <?php $subject = $wantedElements['Creator']; 
             $textz = $subject['texts'][0]; ?>
-            <span class="element-text">
+            <span class="element-text" property="dcterms:creator">
                 <?php if(startsWith($textz, "http://isaw.nyu.edu/people/") or startsWith($textz, "https://isaw.nyu.edu/people/")): 
                     $url=$textz . "/foaf.rdf";
                     $graph = EasyRdf_Graph::newAndLoad($url);
@@ -54,18 +56,6 @@ unset($wantedElements['Title']);
                     ?>
                     <!-- ISAW person -->
                     <a text="link to ISAW personal profile" href="<?php echo $textz; ?>"><?php echo $person->get('foaf:name') ?></a>
-                <?php elseif(startsWith($textz, "http://viaf.org/viaf/")): 
-                    $url=$textz . "/rdf.xml";
-                    $graph = EasyRdf_Graph::newAndLoad($url, 'rdfxml');
-                    echo "Graph type: ".$graph->type()."\n";
-                    if ($graph->type() == 'foaf:PersonalProfileDocument' or $graph->type() == 'foaf:Document') {
-                        $person = $graph->primaryTopic();
-                    } elseif ($graph->type() == 'foaf:Person') {
-                        $person = $graph->resource();
-                    }
-                    ?>
-                    <!-- VIAF person -->
-                    <a text="linke to VIAF record" href="<?php echo $textz; ?>"><?php echo $person->get('foaf:name') ?></a>
                 <?php else: ?>
                     <!-- plain-text creator -->
                     <?php foreach($subject['texts'] as $text): ?>
@@ -76,8 +66,8 @@ unset($wantedElements['Title']);
                 <?php endif; ?>
             </span>
         </p>
+        <?php unset($wantedElements['Creator']); ?>
     <?php endif;?>
-
 
     <!-- subject -->
     <?php if(isset($wantedElements['Subject'])):
