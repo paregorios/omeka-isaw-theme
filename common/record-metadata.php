@@ -48,6 +48,7 @@ unset($wantedElements['Title']);
                     $foaf = new EasyRdf_Graph($url);
                     $foaf->load();
                     $me = $foaf->primaryTopic();
+                    echo "Me is: ".$me."\n";
                     echo "My name is: ".$me->get('foaf:name')."\n";
 
                     ?>
