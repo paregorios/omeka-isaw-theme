@@ -38,6 +38,7 @@ unset($wantedElements['Title']);
     <?php if(isset(get_view()->collection) and isset($wantedElements['Creator'])):
         $subject = $wantedElements['Creator']; 
         $text = $subject['texts'][0];
+        echo $text;
         if(startsWith($text, "http://isaw.nyu.edu/people/") or startsWith($text, "https://isaw.nyu.edu/people/")): ?>
         <p>ISAW person</p>
         <?php elseif(startsWith($text, "http://viaf.org/viaf/")): ?>
