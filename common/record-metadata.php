@@ -51,7 +51,7 @@ unset($wantedElements['Title']);
                 <?php foreach($subject['texts'] as $text): ?>
                     <span class="element-text">
                         <?php foreach ($elementInfo['texts'] as $text): 
-                             echo $text; ?>
+                             echo $text;
                         endforeach; ?>
                     </span>
                 <?php endforeach; ?>
