@@ -37,9 +37,10 @@ unset($wantedElements['Title']);
     <!-- creator for collections --> 
     <?php if(isset(get_view()->collection) and isset($wantedElements['Creator'])):
         $subject = $wantedElements['Creator']; 
-        if(startsWith($subject, "http://isaw.nyu.edu/people/") or startsWith($subject, "https://isaw.nyu.edu/people/")): ?>
+        $text = $subject['texts'][0]
+        if(startsWith($text, "http://isaw.nyu.edu/people/") or startsWith($text, "https://isaw.nyu.edu/people/")): ?>
         <p>ISAW person</p>
-        <?php elseif(startsWith($subject, "http://viaf.org/viaf/")): ?>
+        <?php elseif(startsWith($text, "http://viaf.org/viaf/")): ?>
             <p>VIAF person</p>
         <?php else: ?>
             <p>lame person</p>
