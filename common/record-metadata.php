@@ -1,3 +1,16 @@
+<?php 
+
+function startsWith($haystack, $needle)
+{
+    return $needle === "" || strpos($haystack, $needle) === 0;
+}
+function endsWith($haystack, $needle)
+{
+    return $needle === "" || substr($haystack, -strlen($needle)) === $needle;
+}
+
+?>
+
 <?php if(isset(get_view()->item) or isset(get_view()->collection)): //check if this looks like an item or collection show page ?>
 
 <?php
@@ -23,7 +36,14 @@ unset($wantedElements['Title']);
 <div class="element-set">
     <!-- creator for collections --> 
     <?php if(isset(get_view()->collection) and isset($wantedElements['Creator'])):
-        $subject = $wantedElements['Creator']; ?>
+        $subject = $wantedElements['Creator']; 
+        if(startsWith($subject, "http://isaw.nyu.edu/people/") or startsWith($subject, "https://isaw.nyu.edu/people/")): ?>
+        <p>ISAW person</p>
+        <?php elseif(startsWith($subject, "http://viaf.org/viaf/")): ?>
+            <p>VIAF person</p>
+        <?php else: ?>
+            <p>lame person</p>
+        <?php endif; ?>
         <p class="element"><?php 
             foreach($subject['texts'] as $text): ?>
                 <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
