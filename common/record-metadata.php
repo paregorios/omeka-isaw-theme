@@ -54,7 +54,7 @@ unset($wantedElements['Title']);
                              echo $text; ?>
                         endforeach; ?>
                     </span>
-                <? php endforeach; ?>
+                <?php endforeach; ?>
             <?php endif; ?>
         </p>
     <?php endif;?>
