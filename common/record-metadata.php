@@ -1,4 +1,4 @@
-<?php if(isset(get_view()->item)): //check if this looks like an item show page ?>
+<?php if(isset(get_view()->item) or isset(get_view()->collection)): //check if this looks like an item or collection show page ?>
 
 <?php
 //dig through the elements for display that are passed into this file
@@ -48,8 +48,6 @@ unset($wantedElements['Title']);
     <?php endforeach; ?>
 </div><!-- end element-set -->
 
-<?php elseif(isset(get_view()->collection)): //check if this looks like an item show page ?>
-    <p>Garflactula</p>
 <?php else: ?>
 <?php foreach ($elementsForDisplay as $setName => $setElements): ?>
 <div class="element-set">
