@@ -29,7 +29,8 @@ unset($wantedElements['Title']);
                 <span class="element-name"><?php echo html_escape(__($elementName)); ?></span>:
                 <?php foreach ($elementInfo['texts'] as $text): ?>
                 <span class="element-text"><?php echo $text; ?></span>
-            <?php endforeach; ?></p>
+                <?php endforeach; 
+            endforeach; ?></p>
         <?php unset($wantedElements['Creator']); ?>
     <?php endif;?>
 
