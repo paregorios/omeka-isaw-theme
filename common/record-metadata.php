@@ -56,8 +56,8 @@ unset($wantedElements['Title']);
                     <a text="link to ISAW personal profile" href="<?php echo $textz; ?>"><?php echo $person->get('foaf:name') ?></a>
                 <?php elseif(startsWith($textz, "http://viaf.org/viaf/")): 
                     $url=$textz . "/rdf.xml";
-                    echo "Graph type: ".$graph->type()."\n";
                     $graph = EasyRdf_Graph::newAndLoad($url);
+                    echo "Graph type: ".$graph->type()."\n";
                     if ($graph->type() == 'foaf:PersonalProfileDocument' or $graph->type() == 'foaf:Document') {
                         $person = $graph->primaryTopic();
                     } elseif ($graph->type() == 'foaf:Person') {
