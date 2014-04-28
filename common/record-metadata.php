@@ -48,8 +48,9 @@ unset($wantedElements['Title']);
     <?php endforeach; ?>
 </div><!-- end element-set -->
 
-<?php else: ?>
+<?php elseif(isset(get_view()->collection)): //check if this looks like an item show page ?>
     <p>Garflactula</p>
+<?php else: ?>
 <?php foreach ($elementsForDisplay as $setName => $setElements): ?>
 <div class="element-set">
     <h2><?php echo html_escape(__($setName)); ?></h2>
